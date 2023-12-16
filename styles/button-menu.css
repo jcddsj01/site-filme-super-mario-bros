@@ -1,0 +1,38 @@
+.button-menu {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    row-gap: 6px;
+    border: 0;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+
+.button-menu:hover {
+    cursor: pointer;
+}
+
+.button-menu span {
+    width: 35px;
+    height: 2px;
+    background: var(--text);
+    transition: all 0.4s;
+}
+
+.button-menu span:nth-child(2) {
+    width: 60%;
+}
+
+.button-menu.active span:nth-child(2) {
+    opacity: 0;
+    width: 0px;
+}
+
+.button-menu.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-4px, 4px);
+}
+
+.button-menu.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
